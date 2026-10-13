@@ -1,14 +1,46 @@
 {
+  "upozorneni": [
+    {
+      "text": "V pátek 23. 10. máme zavřeno.",
+      "zobrazitDo": "2026-10-23"
+    }
+  ],
   "oteviraciDoba": [
-    { "den": "Pondělí", "dopoledne": "8-11:30", "odpoledne": "12:30-16:30" },
-    { "den": "Úterý", "dopoledne": "8-11:30", "odpoledne": "12:30-16:30" },
-    { "den": "Středa", "dopoledne": "8-11:30", "odpoledne": "12:30-16:30" },
-    { "den": "Čtvrtek", "dopoledne": "8-11:30", "odpoledne": "12:30-16:30" },
-    { "den": "Pátek", "dopoledne": "8-11:30", "odpoledne": "12:30-15:30" }
+    {
+      "den": "Pondělí",
+      "dopoledne": "8-11:30",
+      "odpoledne": "12:30-16:30"
+    },
+    {
+      "den": "Úterý",
+      "dopoledne": "8-11:30",
+      "odpoledne": "12:30-16:30"
+    },
+    {
+      "den": "Středa",
+      "dopoledne": "8-11:30",
+      "odpoledne": "12:30-16:30"
+    },
+    {
+      "den": "Čtvrtek",
+      "dopoledne": "8-11:30",
+      "odpoledne": "12:30-16:30"
+    },
+    {
+      "den": "Pátek",
+      "dopoledne": "8-11:30",
+      "odpoledne": "12:30-15:30"
+    }
   ],
   "telefony": [
-    { "zobrazit": "530 350 446", "tel": "+420530350446" },
-    { "zobrazit": "602 959 834", "tel": "+420602959834" }
+    {
+      "zobrazit": "530 350 446",
+      "tel": "+420530350446"
+    },
+    {
+      "zobrazit": "602 959 834",
+      "tel": "+420602959834"
+    }
   ],
   "email": "info@optikmihula.cz",
   "adresa": {
