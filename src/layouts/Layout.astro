@@ -1,0 +1,49 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Optik Mihula | Poliklinika Kuřim',
+  description = 'Optik Mihula - Poliklinika Kuřim',
+} = Astro.props;
+
+const og = (file: string) => new URL(`/assets/img/${file}`, Astro.site).href;
+---
+
+<!doctype html>
+<html class="no-js" lang="cs">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69107700-15"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-69107700-15');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/assets/css/app.css" />
+
+    <meta name="description" content={description} />
+    <meta name="image" content={og('og-image-1200x675.jpg')} />
+    <meta property="og:title" content="Optik Mihula" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={og('og-image-1200x630.jpg')} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:title" content="Optik Mihula" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={og('og-image-1200x600.jpg')} />
+  </head>
+  <body>
+    <slot />
+    <script is:inline src="/assets/js/app.js"></script>
+  </body>
+</html>

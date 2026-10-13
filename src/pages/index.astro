@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import info from '../data/info.json';
+---
+
+<Layout>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="small-7 medium-5 large-4 cell informace-container">
+        <div class="informace">
+          <h1><img src="/assets/img/optik-mihula-logo.svg" alt="Optik Mihula" /></h1>
+          <h2 class="h4">Otevírací doba</h2>
+          <table class="unstriped">
+            {info.oteviraciDoba.map((d) => (
+              <tr>
+                <th>{d.den}</th>
+                <td>{d.dopoledne}</td>
+                <td>{d.odpoledne}</td>
+              </tr>
+            ))}
+          </table>
+
+          <div class="kontakty">
+            {info.telefony.map((t) => (
+              <div class="kontakt">
+                <img src="/assets/img/telefon-icon.svg" alt="Telefon" /> <a href={`tel:${t.tel}`}>{t.zobrazit}</a>
+              </div>
+            ))}
+            <div class="kontakt"><a href={`mailto:${info.email}`}>{info.email}</a></div>
+          </div>
+
+          <div class="adresa">
+            <img src="/assets/img/misto-icon.svg" alt="Místo" /> <a href={info.adresa.mapa}>{info.adresa.nazev}</a>, <br />
+            {info.adresa.ulice}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
